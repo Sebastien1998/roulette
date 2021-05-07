@@ -1,10 +1,14 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Timeout;
 
 import static org.mockito.Mockito.mock;
 
 class RouletteTest {
+
+    @Rule
+    public Timeout globalTimeout = Timeout.seconds(21);
 
     @RepeatedTest(40)
     public void generateNumTest() {
@@ -14,8 +18,4 @@ class RouletteTest {
         Assertions.assertTrue(number<37&&number>-1);
     }
 
-    @Test
-    public void spinTest(){
-
-    }
 }
