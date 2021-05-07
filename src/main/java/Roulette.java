@@ -4,7 +4,7 @@ public class Roulette {
 
     int number;
 
-    public int tournerRoulette(){
+    public int generateNum(){
         return number = (int) (Math.random()*37);
     }
 
